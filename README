@@ -1,0 +1,4 @@
+Vagrant/Virtualbox development enviroment for linux-wpan
+========================================================
+This repository includes my configurations for compiling bluetooth-next HEAD
+for Raspberry Pi in a virtual ubuntu machine.
