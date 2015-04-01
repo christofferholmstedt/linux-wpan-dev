@@ -9,4 +9,4 @@ sudo apt-get -y install vim git
 
 ### Build tools
 sudo apt-get -y install build-essential doxygen \
-                        subversion cmake
+                        subversion cmake libncurses5-dev libncursesw5-dev
