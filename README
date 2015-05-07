@@ -1,4 +1,30 @@
-Vagrant/Virtualbox development enviroment for linux-wpan
-========================================================
-This repository includes my configurations for compiling bluetooth-next HEAD
-for Raspberry Pi in a virtual ubuntu machine.
+linux-wpan development tools for Raspberry Pi
+=============================================
+This repository includes my scripts for compiling linux kernel development
+branch/repository "bluetooth-next" HEAD for Raspberry Pi.
+
+### Best documentation is running code
+The main goal with this repository is to maintain a few scripts that make the
+process of compiling the latest bluetooth-next kernel as easy as possible as
+well as configuring the Raspberry Pis when they boot up.
+
+### Scripts
+If you don't know what Vagrant is nor care to learn you can just skip all
+vagrant files and head straight for the "scripts" folder. All scripts are made
+for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
+
+	- download_prerequisites.sh
+	Run this script first to clone (with git) both the bluetooth-next
+	repository and the U-Boot repository from @swarren.
+
+### Vagrant
+Prerequisites: Vagrant and Virtualbox.
+
+In this git repository Vagrant is configured to boot up a Ubuntu 14.04 VM in
+Virtualbox, update and upgrade as well as installing required build tools for
+building the linux-kernel. The provisioning scripts do _not_ download nor
+build/compile the linux-kernel or U-Boot. You have to do that yourself:
+
+	1 vagrant up
+	2 vagrant ssh
+	3 sudo ./host/scripts/download_prerequisites.sh
