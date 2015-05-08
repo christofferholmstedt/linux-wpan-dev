@@ -42,9 +42,9 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself.
 
 **Prerequisites**
 
-- gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
-- Virtualbox
-- Vagrant
+* gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
+* Virtualbox
+* Vagrant
 
 1. ```vagrant up```
 2. ```vagrant ssh```
