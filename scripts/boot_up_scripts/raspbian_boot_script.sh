@@ -17,7 +17,7 @@ cat << EOF
 EOF
 }
 
-while getopts “ha:” OPTION
+while getopts “ha:p:” OPTION
 do
 case $OPTION in
 	h)
