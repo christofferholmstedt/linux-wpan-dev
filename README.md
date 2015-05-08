@@ -25,11 +25,11 @@ for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
 **Prerequisites**:
 * gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
 
-*download_prerequisites.sh*
+```download_prerequisites.sh```
 Run this script first to clone (with git) both the bluetooth-next repository
 and the U-Boot repository from @swarren.
 
-*patch_and_build.sh*
+```patch_and_build.sh```
 Run this script as the second step to build the
 linux kernel and U-Boot. All artifacts will be put in the "output" folder ready
 to be copied to a microSD/SD card or made available over TFTP.
@@ -54,7 +54,7 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself.
 ##### Scripts
 Afer the linux kernel and U-Boot have been copied to your microSD/SD card it is
 time to boot up your Raspberry Pi and configure your system. All scripts
-required for this step are in the "/scripts/boot_up_scripts" folder.
+required for this step are in the ```/scripts/boot_up_scripts``` folder.
 
 On your Raspberry Pi do the following:
 
