@@ -18,10 +18,9 @@ libraries/applications that work together.
 
 ### Building the kernel and U-Boot
 If you don't know what Vagrant is nor care to learn you can just skip all
-vagrant files and head straight for the "scripts" folder. All scripts are made
-for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
+vagrant files and head straight for the ```scripts``` folder. All scripts are
+made for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
 
-##### Scripts
 **Prerequisites**:
 * gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
 
