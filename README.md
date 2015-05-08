@@ -33,8 +33,9 @@ On your local developer machine
   * Run this script as the second step to build the
     linux kernel and U-Boot. All artifacts will be put in the ```output```
     folder ready to be copied to a microSD/SD card. For Raspbian this means you
-    should copy all files from ```output``` folder to root of the
-    ```boot```partition on the microSD/SD card.
+    should copy all **files** from ```output``` folder to root of the
+    ```boot```partition on the microSD/SD card. The **lib/modules/** folder
+    should be copied to the other partition.
 
 ##### Vagrant
 In this git repository Vagrant is configured to boot up a Ubuntu 14.04 VM in
