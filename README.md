@@ -4,7 +4,7 @@ This repository includes my scripts for compiling linux kernel development
 branch/repository "bluetooth-next" for Raspberry Pi.
 
 **Prerequisites**:
-* Working Raspbian installation on a microSD/SD card.
+Working Raspbian installation on a microSD/SD card.
 
 ##### Best documentation is running code
 The main goal with this repository is to maintain a few scripts that make the
@@ -22,7 +22,7 @@ vagrant files and head straight for the ```scripts``` folder. All scripts are
 made for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
 
 **Prerequisites**:
-* gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
+gcc-arm-linux-gnueabi package from Ubuntu/Debian repository.
 
 On your local developer machine
 * ```git clone https://github.com/christofferholmstedt/linux-wpan-dev```
@@ -41,9 +41,8 @@ building the linux-kernel. The provisioning scripts do _not_ download nor
 build/compile the linux-kernel or U-Boot. You have to do that yourself.
 
 **Prerequisites**
-
-* gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
-* Virtualbox and Vagrant
+gcc-arm-linux-gnueabi package from Ubuntu/Debian repository, Virtualbox and
+Vagrant.
 
 1. ```vagrant up```
 2. ```vagrant ssh```
