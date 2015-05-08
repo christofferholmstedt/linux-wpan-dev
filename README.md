@@ -24,10 +24,12 @@ made for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
 **Prerequisites**:
 * gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
 
-* download_prerequisites.sh
+On your local developer machine
+* ```git clone https://github.com/christofferholmstedt/linux-wpan-dev```
+* ```./linux-wpan-dev/scripts/download_prerequisites.sh```
   * Run this script first to clone (with git) both the bluetooth-next
     repository and the U-Boot repository from @swarren.
-* patch_and_build.sh
+* ```./linux-wpan-dev/scripts/patch_and_build.sh```
   * Run this script as the second step to build the
     linux kernel and U-Boot. All artifacts will be put in the "output" folder
     ready to be copied to a microSD/SD card or made available over TFTP.
