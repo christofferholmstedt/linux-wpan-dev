@@ -3,16 +3,17 @@ usage()
 {
 cat << EOF
 
-    usage: $0 -a ADDRESS
+    usage: $0 -a ADDRESS -p PAN_ID
 
     Example usage:
-    -a 1 (fe80::1/64)
-    -a cafe (fe80::cafe/64)
-    -a 100 (fe80::100/64)
+    -a 1 -p cafe	(pan_id: 0xcafe and address: fe80::1/64)
+    -a cafe -p cafe	(pan_id: 0xcafe and address: fe80::cafe/64)
+    -a 100 -p ace	(pan_id: 0x0ace and address: fe80::100/64)
 
     OPTIONS:
     -h Shows this message
     -a Link-local IPv6 address. Last 16 bit in hexadecimal.
+    -p 802.15.4 PAN ID. 16 bit in hexadecimal.
 EOF
 }
 
@@ -26,6 +27,9 @@ case $OPTION in
 	a)
 		ADDRESS=$OPTARG
 		;;
+	p)
+		PANID=$OPTARG
+		;;
 	?)
 		usage
 		exit
@@ -33,7 +37,7 @@ case $OPTION in
 	esac
 done
 
-if [[ -z $ADDRESS ]]
+if [[ -z $ADDRESS ]] || [[ -z $PANID ]]
 then
 	usage
 	exit 1
@@ -46,7 +50,7 @@ fi
 # wpan0 inteface must be down but should be so by default (assuming ifplugd is
 # disabled as above).
 # Specify PAN_ID
-iwpan dev wpan0 set pan_id 0xcafe
+iwpan dev wpan0 set pan_id 0x$PANID
 
 # Set up lowpan interface
 ip link add link wpan0 name lowpan0 type lowpan
