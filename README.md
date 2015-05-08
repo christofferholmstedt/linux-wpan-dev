@@ -8,8 +8,8 @@ The main goal with this repository is to maintain a few scripts that make the
 process of compiling the latest working bluetooth-next kernel as easy as
 possible, as well as configuring the Raspberry Pis when they boot up.
 
-# Building the kernel and U-Boot
-### Scripts
+## Building the kernel and U-Boot
+#### Scripts
 *Prerequisites*:
   - "gcc-arm-linux-gnueabi" package from Ubuntu/Debian repository
 
@@ -26,7 +26,7 @@ for Ubuntu and tested on Ubuntu Trusty Tahr 14.04.2.
 	U-Boot. All artifacts will be put in the "output" folder ready to be
 	copied to a microSD/SD card or made available over TFTP.
 
-### Vagrant
+#### Vagrant
 *Prerequisites*:
   - "gcc-arm-linux-gnueabi" package from Ubuntu/Debian repository
   - Virtualbox
@@ -42,10 +42,10 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself:
 	3 ./host/scripts/download_prerequisites.sh
 	4 ./host/scripts/patch_and_build.sh
 
-# Configuring the device after boot-up
-### Scripts
+## Configuring the device after boot-up
+#### Scripts
 
-# Release notes
+## Release notes
 ##### v0.1.0
 First release of scripts. This release was verified to work with
 Raspberry Pi B the 8th of May 2015.
@@ -53,7 +53,7 @@ Raspberry Pi B the 8th of May 2015.
 It uses bluetooth-next linux kernel from 2015-04-30 and U-Boot from 2015-11-10.
 For wpan-tools version 0.4 is used.
 
-# TODO (maybe, if I find it useful)
+## TODO (maybe, if I find it useful)
   * Update U-Boot to newer version.
   * Add support for Raspberry Pi Model B+
   * Add support for Raspberry Pi Model 2 Model B
