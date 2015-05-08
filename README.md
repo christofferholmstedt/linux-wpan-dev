@@ -5,8 +5,8 @@ branch/repository "bluetooth-next" for Raspberry Pi.
 
 ### Best documentation is running code
 The main goal with this repository is to maintain a few scripts that make the
-process of compiling the latest bluetooth-next kernel as easy as possible, as
-well as configuring the Raspberry Pis when they boot up.
+process of compiling the latest working bluetooth-next kernel as easy as
+possible, as well as configuring the Raspberry Pis when they boot up.
 
 # Building the kernel and U-Boot
 ### Scripts
