@@ -59,7 +59,7 @@ For wpan-tools version 0.4 is used.
   * Add support for Raspberry Pi Model 2 Model B
   * Add support for BeagleBone Black
   * Add support for Raspberry Pi Model A+
-	Need to pre-load with wpan-tools and configure it automatically on
-	boot-up as ethernet is not available. If routing works over lowpan it
-	might be possible to ssh over it. This practically means build a
-	complete image for it.
+  Need to pre-load with wpan-tools and configure it automatically on
+  boot-up as ethernet is not available. If routing works over lowpan it
+  might be possible to ssh over it. This practically means build a
+  complete image for it.
