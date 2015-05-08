@@ -6,7 +6,7 @@ branch/repository "bluetooth-next" for Raspberry Pi.
 **Prerequisites**:
 Working Raspbian installation on a microSD/SD card.
 
-##### Best documentation is running code
+### Best documentation is running code
 The main goal with this repository is to maintain a few scripts that make the
 process of compiling the latest working bluetooth-next kernel as easy as
 possible, as well as configuring the Raspberry Pis when they boot up.
@@ -71,8 +71,9 @@ On your Raspberry Pi do the following:
     2015-02-16, bluetooth-next linux kernel from 2015-04-30
     and U-Boot from 2015-11-10. For wpan-tools version 0.4 is used.
 
-### TODO (maybe, if I find it useful)
-* Update U-Boot to newer version.
+### ToDo
+* Keep linux-kernel version up to date with latest wpan additions
+* Update U-Boot to newer version
 * Add support for Raspberry Pi Model B+
 * Add support for Raspberry Pi Model 2 Model B
 * Add support for BeagleBone Black
