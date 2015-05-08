@@ -55,7 +55,7 @@ ifconfig lowpan0 down
 iwpan dev wpan0 set pan_id 0x$PANID
 
 # Set up lowpan interface if it is not already set up.
-if [[ -n $(ifconfig -a) ]]; then
+if [[ ! -n $(ifconfig -a) ]]; then
 	ip link add link wpan0 name lowpan0 type lowpan
 fi
 
