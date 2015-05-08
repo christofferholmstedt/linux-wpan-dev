@@ -2,6 +2,7 @@
 usage()
 {
 cat << EOF
+
     usage: $0 -a ADDRESS
 
     Example usage:
