@@ -43,6 +43,7 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself:
 	4 ./host/scripts/patch_and_build.sh
 
 # Configuring the device after boot-up
+### Scripts
 
 # Release notes
 ##### v0.1.0
