@@ -56,7 +56,7 @@ Afer the linux kernel and U-Boot have been copied to your microSD/SD card it is
 time to boot up your Raspberry Pi and configure your system. All scripts
 required for this step are in the "/scripts/boot_up_scripts" folder.
 
-On your Raspbian do the following:
+On your Raspberry Pi do the following:
 
 1. git clone https://github.com/christofferholmstedt/linux-wpan-dev
 2. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_first_boot.sh
@@ -64,7 +64,7 @@ On your Raspbian do the following:
 4. sudo ./linux-wpan-dev/scripts/boot_up_scripts/build_wpan-tools.sh
 5. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_boot_script.sh
   * Remember to specificy pan id and link-local address here (the script will warn you).
-6. ping6 <address>%<lowpan0>
+6. ```ping6 <address>%<lowpan0>```
 
 ### Release notes
 * v0.1.0
