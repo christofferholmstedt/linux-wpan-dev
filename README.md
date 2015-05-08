@@ -40,7 +40,8 @@ Virtualbox, update and upgrade as well as installing required build tools for
 building the linux-kernel. The provisioning scripts do _not_ download nor
 build/compile the linux-kernel or U-Boot. You have to do that yourself.
 
-**Prerequisites**:
+**Prerequisites**
+
 - gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
 - Virtualbox
 - Vagrant
@@ -51,7 +52,6 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself.
 4. ```./host/scripts/patch_and_build.sh```
 
 ### Configuring the device after boot-up
-##### Scripts
 Afer the linux kernel and U-Boot have been copied to your microSD/SD card it is
 time to boot up your Raspberry Pi and configure your system. All scripts
 required for this step are in the ```/scripts/boot_up_scripts``` folder.
