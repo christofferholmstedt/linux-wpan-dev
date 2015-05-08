@@ -54,8 +54,10 @@ ifconfig lowpan0 down
 # Specify PAN_ID
 iwpan dev wpan0 set pan_id 0x$PANID
 
-# Set up lowpan interface
-ip link add link wpan0 name lowpan0 type lowpan
+# Set up lowpan interface if it is not already set up.
+if [[ -n $(ifconfig -a) ]]; then
+	ip link add link wpan0 name lowpan0 type lowpan
+fi
 
 # Set an easy to remember local ip if needed
 ip address add dev lowpan0 scope link fe80::$ADDRESS/64
