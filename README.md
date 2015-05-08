@@ -41,14 +41,14 @@ building the linux-kernel. The provisioning scripts do _not_ download nor
 build/compile the linux-kernel or U-Boot. You have to do that yourself.
 
 **Prerequisites**:
-	- gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
-	- Virtualbox
-	- Vagrant
+- gcc-arm-linux-gnueabi package from Ubuntu/Debian repository
+- Virtualbox
+- Vagrant
 
-	* vagrant up
-	* vagrant ssh
-	* ./host/scripts/download_prerequisites.sh
-	* ./host/scripts/patch_and_build.sh
+1. vagrant up
+2. vagrant ssh
+3. ./host/scripts/download_prerequisites.sh
+4. ./host/scripts/patch_and_build.sh
 
 ### Configuring the device after boot-up
 ##### Scripts
@@ -57,29 +57,28 @@ time to boot up your Raspberry Pi and configure your system. All scripts
 required for this step are in the "/scripts/boot_up_scripts" folder.
 
 On your Raspbian do the following thing:
-	* git clone https://github.com/christofferholmstedt/linux-wpan-dev
-	* sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_first_boot.sh
-	* sudo shutdown -r 0
-	* sudo ./linux-wpan-dev/scripts/boot_up_scripts/build_wpan-tools.sh
-	* sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_boot_script.sh
-	Remember to specificy pan id and link-local address here (the script
-	will warn you).
-	* ping6 <address>%<lowpan0>
+1. git clone https://github.com/christofferholmstedt/linux-wpan-dev
+2. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_first_boot.sh
+3. sudo shutdown -r 0
+4. sudo ./linux-wpan-dev/scripts/boot_up_scripts/build_wpan-tools.sh
+5. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_boot_script.sh
+  * Remember to specificy pan id and link-local address here (the script will warn you).
+6. ping6 <address>%<lowpan0>
 
 ### Release notes
-	* v0.1.0
-	First release of scripts. This release was verified to work with
-	Raspberry Pi B the 8th of May 2015. Raspbian version used was from
-	2015-02-16, bluetooth-next linux kernel from 2015-04-30
-	and U-Boot from 2015-11-10. For wpan-tools version 0.4 is used.
+* v0.1.0
+  * First release of scripts. This release was verified to work with
+    Raspberry Pi B the 8th of May 2015. Raspbian version used was from
+    2015-02-16, bluetooth-next linux kernel from 2015-04-30
+    and U-Boot from 2015-11-10. For wpan-tools version 0.4 is used.
 
 ### TODO (maybe, if I find it useful)
-	* Update U-Boot to newer version.
-	* Add support for Raspberry Pi Model B+
-	* Add support for Raspberry Pi Model 2 Model B
-	* Add support for BeagleBone Black
-	* Add support for Raspberry Pi Model A+
-	Need to pre-load with wpan-tools and configure it automatically on
-	boot-up as ethernet is not available. If routing works over lowpan it
-	might be possible to ssh over it. This practically means build a
-	complete image for it.
+* Update U-Boot to newer version.
+* Add support for Raspberry Pi Model B+
+* Add support for Raspberry Pi Model 2 Model B
+* Add support for BeagleBone Black
+* Add support for Raspberry Pi Model A+
+  Need to pre-load with wpan-tools and configure it automatically on
+  boot-up as ethernet is not available. If routing works over lowpan it
+  might be possible to ssh over it. This practically means build a
+  complete image for it.
