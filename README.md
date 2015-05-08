@@ -31,8 +31,10 @@ On your local developer machine
     repository and the U-Boot repository (U-Boot from @swarren)
 * ```./linux-wpan-dev/scripts/patch_and_build.sh```
   * Run this script as the second step to build the
-    linux kernel and U-Boot. All artifacts will be put in the "output" folder
-    ready to be copied to a microSD/SD card or made available over TFTP.
+    linux kernel and U-Boot. All artifacts will be put in the ```output```
+    folder ready to be copied to a microSD/SD card. For Raspbian this means you
+    should copy all files from ```output``` folder to root of the
+    ```boot```partition on the microSD/SD card.
 
 ##### Vagrant
 In this git repository Vagrant is configured to boot up a Ubuntu 14.04 VM in
