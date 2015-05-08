@@ -1,5 +1,5 @@
-linux-wpan development tools for Raspberry Pi
-=============================================
+linux-wpan dev scripts for Raspberry Pi
+=======================================
 This repository includes my scripts for compiling linux kernel development
 branch/repository "bluetooth-next" for Raspberry Pi.
 
