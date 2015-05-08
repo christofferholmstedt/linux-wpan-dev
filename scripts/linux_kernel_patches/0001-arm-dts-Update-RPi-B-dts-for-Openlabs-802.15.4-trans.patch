@@ -1,0 +1,40 @@
+From b0d5d68985d8b1160f3b56081ae7e62edfbfcc67 Mon Sep 17 00:00:00 2001
+From: Christoffer Holmstedt <christoffer.holmstedt@gmail.com>
+Date: Wed, 6 May 2015 13:40:51 +0200
+Subject: [PATCH] arm: dts: Update RPi B dts for Openlabs 802.15.4 transceiver
+
+This adds the device tree settings for the Openlabs.co 802.15.4 SPI board to be
+used with the RPi model b board.
+
+TODO: This should probably use some kind of device tree overlay instead.
+
+Signed-off-by: Christoffer Holmstedt <christoffer.holmstedt@gmail.com>
+---
+ arch/arm/boot/dts/bcm2835-rpi-b.dts | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/arch/arm/boot/dts/bcm2835-rpi-b.dts b/arch/arm/boot/dts/bcm2835-rpi-b.dts
+index bafa46fc226a..3618c5321e91 100644
+--- a/arch/arm/boot/dts/bcm2835-rpi-b.dts
++++ b/arch/arm/boot/dts/bcm2835-rpi-b.dts
+@@ -21,3 +21,17 @@
+ 		brcm,function = <6>; /* alt2 */
+ 	};
+ };
++
++&spi {
++	status = "okay";
++	at86rf233@0 {
++		compatible = "atmel,at86rf233";
++		spi-max-frequency = <6000000>;
++		reg = <0>;
++		interrupts = <23 1>;
++		interrupt-parent = <&gpio>;
++		reset-gpio = <&gpio 24 1>;
++		sleep-gpio = <&gpio 25 1>;
++		xtal-trim = /bits/ 8 <0x0F>;
++	};
++};
+-- 
+1.9.1
+
