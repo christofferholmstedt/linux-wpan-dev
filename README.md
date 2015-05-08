@@ -45,10 +45,10 @@ build/compile the linux-kernel or U-Boot. You have to do that yourself.
 - Virtualbox
 - Vagrant
 
-1. vagrant up
-2. vagrant ssh
-3. ./host/scripts/download_prerequisites.sh
-4. ./host/scripts/patch_and_build.sh
+1. ```vagrant up```
+2. ```vagrant ssh```
+3. ```./host/scripts/download_prerequisites.sh```
+4. ```./host/scripts/patch_and_build.sh```
 
 ### Configuring the device after boot-up
 ##### Scripts
@@ -58,11 +58,11 @@ required for this step are in the "/scripts/boot_up_scripts" folder.
 
 On your Raspberry Pi do the following:
 
-1. git clone https://github.com/christofferholmstedt/linux-wpan-dev
-2. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_first_boot.sh
-3. sudo shutdown -r 0
-4. sudo ./linux-wpan-dev/scripts/boot_up_scripts/build_wpan-tools.sh
-5. sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_boot_script.sh
+1. ```git clone https://github.com/christofferholmstedt/linux-wpan-dev```
+2. ```sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_first_boot.sh```
+3. ```sudo shutdown -r 0```
+4. ```sudo ./linux-wpan-dev/scripts/boot_up_scripts/build_wpan-tools.sh```
+5. ```sudo ./linux-wpan-dev/scripts/boot_up_scripts/raspbian_boot_script.sh```
   * Remember to specificy pan id and link-local address here (the script will warn you).
 6. ```ping6 <address>%<lowpan0>```
 
