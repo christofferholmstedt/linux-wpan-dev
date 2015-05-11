@@ -8,7 +8,8 @@
 
 ### Install required packages (netlink dev, generic netlink dev)
 apt-get update
-apt-get install libnl-3-dev libnl-genl-3-dev
+apt-get install bison flex autoconf libtool help2man libnl-3-dev \
+	libnl-genl-3-dev
 
 if [ ! -d "wpan-tools" ]; then
 	echo "[INFO]"
