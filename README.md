@@ -35,7 +35,9 @@ On your local developer machine
     folder ready to be copied to a microSD/SD card. For Raspbian this means you
     should copy all **files** from ```output``` folder to root of the
     ```boot```partition on the microSD/SD card. The **lib/modules/** folder
-    should be copied to the other partition.
+    should be copied to the other partition. **NOTE:** At the moment all
+    modules are "built-in" so you don't have to copy the ```lib/modules```
+    folder.
 
 ##### Vagrant
 In this git repository Vagrant is configured to boot up a Ubuntu 14.04 VM in
