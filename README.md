@@ -70,13 +70,12 @@ On your Raspberry Pi do the following:
 6. ```ping6 <address>%<lowpan0>```
 
 ### Release notes
-<!---
 * v0.1.0
   * First release of scripts. This release was verified to work with
-    Raspberry Pi B the 8th of May 2015. Raspbian version used was from
+    Raspberry Pi B the 13th of May 2015. Raspbian version used was from
     2015-02-16, bluetooth-next linux kernel from 2015-04-30
-    and U-Boot from 2015-11-10. For wpan-tools version 0.4 is used.
---->
+    and U-Boot from 2014-11-10. For wpan-tools version 0.4 is used.
+
 ### ToDo
 * Keep linux-kernel version up to date with latest wpan additions
 * Update U-Boot to newer version
