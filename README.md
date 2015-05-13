@@ -80,7 +80,7 @@ On your Raspberry Pi do the following:
 * Keep linux-kernel version up to date with latest wpan additions
 * Update U-Boot to newer version
 * Add support for Raspberry Pi Model B+
-* Add support for Raspberry Pi Model 2 Model B
+* Add support for Raspberry Pi 2 Model B
 * Add support for BeagleBone Black
 * Add support for Raspberry Pi Model A+
   * Need to pre-load with wpan-tools and configure it automatically on
