@@ -49,7 +49,9 @@ fi
 
 # wpan0 inteface must be down
 ifconfig wpan0 down
-ifconfig lowpan0 down
+if [[ $(ifconfig -a) = *lowpan0* ]]; then
+	ifconfig lowpan0 down
+fi
 
 # Specify PAN_ID
 iwpan dev wpan0 set pan_id 0x$PANID
