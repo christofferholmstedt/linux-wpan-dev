@@ -62,24 +62,6 @@ if [ -d "u-boot" ]; then
 	cd ..
 fi
 
-###
-# Create uEnv.txt
-#
-# The boot=/dev/mmcblk0p2 describes where the kernel is located and
-# it is crucial it points to correct place. we can find this information from
-# the from old installation rasbperrian used /boot/comandline.txt
-#
-# If it's not mmcblk0p2 for you. Change this script and re-run it (or just
-# change the uEnv.txt file).
-###
-OUTPUT_FILE=uEnv.txt
-if [ ! -f $OUTPUT_FILE ]; then
-cat >> $OUTPUT_FILE << 'EOL'
-bootargs=earlyprintk console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 root=/dev/mmcblk0p2 rootwait dwc_otg.lpm_enable=0
-bootcmd=load mmc 0:1 ${kernel_addr_r} zImage; load mmc 0:1 ${fdt_addr_r} zImage.dtb; bootz ${kernel_addr_r} - ${fdt_addr_r}
-EOL
-fi
-
 if [ -d "output" ]; then
 	rm -rvf output/
 fi
@@ -93,7 +75,6 @@ if [ ! -d "output" ]; then
 	echo "[INFO]"
 	mkdir -pv output/lib/modules
 	cd output
-	cp -v ../uEnv.txt .
 	cp -v ../bluetooth-next/arch/arm/boot/zImage .
 	cp -v ../bluetooth-next/arch/arm/boot/dts/bcm2835-rpi-b.dtb zImage.dtb
 	cp -r ../bluetooth-next/.mods/lib/modules/* lib/modules
@@ -101,3 +82,20 @@ if [ ! -d "output" ]; then
 	cd ..
 fi
 
+###
+# Create uEnv.txt
+#
+# The boot=/dev/mmcblk0p2 describes where the kernel is located and
+# it is crucial it points to correct place. We can find this information from
+# the old Raspbian installation /boot/comandline.txt
+#
+# If it's not mmcblk0p2 for you, change this script and re-run it (or just
+# change the uEnv.txt file).
+###
+OUTPUT_FILE=./output/uEnv.txt
+if [ ! -f $OUTPUT_FILE ]; then
+cat >> $OUTPUT_FILE << 'EOL'
+bootargs=earlyprintk console=tty0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 root=/dev/mmcblk0p2 rootwait dwc_otg.lpm_enable=0
+bootcmd=load mmc 0:1 ${kernel_addr_r} zImage; load mmc 0:1 ${fdt_addr_r} zImage.dtb; bootz ${kernel_addr_r} - ${fdt_addr_r}
+EOL
+fi
