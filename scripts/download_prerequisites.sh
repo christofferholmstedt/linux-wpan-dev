@@ -10,9 +10,9 @@ if [ ! -d "bluetooth-next" ]; then
 	echo "[INFO]"
 	git clone https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git
 
-	cd bluetooth-next
-	git checkout -b bluetooth-next_temp 1add15646672ff4e7fe59bec2afcb5a0c80c5e49
-	cd ..
+#	cd bluetooth-next
+#	git checkout -b bluetooth-next_temp 1add15646672ff4e7fe59bec2afcb5a0c80c5e49
+#	cd ..
 fi
 
 if [ ! -d "u-boot" ]; then
