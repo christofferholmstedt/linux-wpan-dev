@@ -13,6 +13,7 @@ if [ -d "bluetooth-next" ]; then
 	cd bluetooth-next
 
 	git apply $SCRIPT_DIR/linux_kernel_patches/0001-arm-dts-Update-RPi-B-dts-for-Openlabs-802.15.4-trans.patch
+	git apply $SCRIPT_DIR/linux_kernel_patches/0002-arm-dts-Update-RPi-B-Plus-dts-for-Openlabs-802.15.4.patch
 
 	#############################################
 	# Configure linux kernel
@@ -95,7 +96,8 @@ if [ ! -d "output" ]; then
 	cd output
 	cp -v ../uEnv.txt .
 	cp -v ../bluetooth-next/arch/arm/boot/zImage .
-	cp -v ../bluetooth-next/arch/arm/boot/dts/bcm2835-rpi-b.dtb zImage.dtb
+	cp -v ../bluetooth-next/arch/arm/boot/dts/bcm2835-rpi-b.dtb .
+	cp -v ../bluetooth-next/arch/arm/boot/dts/bcm2835-rpi-b-plus.dtb .
 	cp -r ../bluetooth-next/.mods/lib/modules/* lib/modules
 	cp -v ../u-boot/u-boot.bin kernel.img
 	cd ..
