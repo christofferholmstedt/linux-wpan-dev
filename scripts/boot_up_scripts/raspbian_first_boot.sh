@@ -18,7 +18,7 @@ if [ ! -d "wpan-tools" ]; then
 	git clone https://github.com/linux-wpan/wpan-tools.git
 
 	cd wpan-tools
-	git checkout -b wpan-tools_temp wpan-tools-0.4
+	git checkout -b wpan-tools_temp wpan-tools-0.5
 	cd ..
 fi
 

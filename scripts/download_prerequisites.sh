@@ -11,7 +11,7 @@ if [ ! -d "bluetooth-next" ]; then
 	git clone https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git
 
 	cd bluetooth-next
-	git checkout -b bluetooth-next_temp 1add15646672ff4e7fe59bec2afcb5a0c80c5e49
+	git checkout -b bluetooth-next_temp 24add0cc07a88568da9345840a4f221ee0aefbb6
 	cd ..
 fi
 
