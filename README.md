@@ -38,6 +38,8 @@ On your local developer machine
     should be copied to the other partition. **NOTE:** At the moment all
     modules are "built-in" so you don't have to copy the ```lib/modules```
     folder.
+  * Finally alter uEnv.txt, change "zImage.dtb" to the corresponding dtb
+    filename you want, bcm2835-rpi-b-plus.dtb or bcm2835-rpi-b.dtb.
 
 ##### Vagrant
 In this git repository Vagrant is configured to boot up a Ubuntu 14.04 VM in
